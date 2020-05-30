@@ -72,7 +72,7 @@ public class RSA {
     
     public void generateKey(String name){
           try {
-            File myObj = new File("C:\\Users\\acer\\Desktop\\Multichat-App-master\\multichatuser-master\\public keys",name+".txt");
+            File myObj = new File("E:\\project\\Multichat-App-master\\multichatuser-master\\public keys",name+".txt");
             
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
@@ -111,7 +111,7 @@ public class RSA {
       int i = 0;  
       
       try {
-          File myObj = new File("C:\\Users\\acer\\Desktop\\Multichat-App-master\\multichatuser-master\\public keys",name);
+          File myObj = new File("E:\\project\\Multichat-App-master\\multichatuser-master\\public keys",name);
            Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
               String data = myReader.nextLine();

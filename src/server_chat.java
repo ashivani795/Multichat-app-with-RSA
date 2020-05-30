@@ -61,7 +61,7 @@ class ClientHandler implements Runnable
                   
                 if(message.equals("exit")){ 
                     broadcast(sender, "Leave the Chat");
-                    File f = new File("C:\\Users\\acer\\Desktop\\Multichat-App-master\\multichatuser-master\\public keys",sender+".txt");
+                    File f = new File("E:\\project\\Multichat-App-master\\multichatuser-master\\public keys",sender+".txt");
                     f.delete();
                     this.isloggedin=false; 
                     this.s.close(); 
@@ -128,7 +128,7 @@ public class server_chat extends javax.swing.JFrame {
     static int i = 1;
     
     // file to store the encrypted chat session
-    //static File encryptChat = new File("C:\\Users\\Nabajyoti\\Downloads\\multichatuser-master (1)\\multichatuser-master\\Public Keys","EncryptionFile.txt");
+    //static File encryptChat = new File("E:\project\Multichat-App-master\multichatuser-master\\Public Keys","EncryptionFile.txt");
     /**
      * Creates new form server_chat
      */

@@ -115,7 +115,7 @@ public class client_chat extends javax.swing.JFrame {
 
             // Creates a new File instance by converting the given pathname string
             // into an abstract pathname
-            File f = new File("C:\\Users\\acer\\Desktop\\Multichat-App-master\\multichatuser-master\\public keys");
+            File f = new File("E:\\project\\Multichat-App-master\\multichatuser-master\\public keys");
 
             // Populates the array with names of files and directories
             pathnames = f.list();
@@ -129,7 +129,7 @@ public class client_chat extends javax.swing.JFrame {
                         byte[] encryptMsg = rsa.encrypt(msg.getBytes(), pathname);
 
                         System.out.println("Encrpyt bytes " + encryptMsg);
-                        String em = Base64.getEncoder().encodeToString(encryptMsg);
+                        String em = Base64.getEncoder().encodeToString(encryptMsg);//encoding technique for coverting bytes to string
 
                         System.out.println("Encypte msg" + em);
 
@@ -215,7 +215,7 @@ public class client_chat extends javax.swing.JFrame {
             }  //in a new line without deleting the previous chat
 
             System.out.println("deleting file" + userName);
-            File f = new File("C:\\Users\\acer\\Desktop\\Multichat-App-master\\multichatuser-master\\public keys", userName + ".txt");
+            File f = new File("E:\\project\\Multichat-App-master\\multichatuser-master\\public keys", userName + ".txt");
             f.delete();
 
         } catch (Exception e) {
@@ -237,11 +237,22 @@ public class client_chat extends javax.swing.JFrame {
             dcyMsg = msgWords[1];
             flag = 0;
 
-        } else if (!msgWords[1].equals("Joined")) {
+        } else if(msgWords[1].equals("Leave the Chat")){
+            dcyMsg=msgWords[1];
+            flag=0;
+        }
+        
+        
+        
+        
+        
+        
+        
+        else if (!msgWords[1].equals("Joined")){
             if (msgWords[2].equals(userName + ".txt")) {
                 // store the list of public key files 
                 String[] pathnames;
-                File f = new File("C:\\Users\\acer\\Desktop\\Multichat-App-master\\multichatuser-master\\public keys");
+                File f = new File("E:\\project\\Multichat-App-master\\multichatuser-master\\public keys");
 
                 // Populates the array with names of files and directories
                 pathnames = f.list();
