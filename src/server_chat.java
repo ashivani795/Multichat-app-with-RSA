@@ -125,7 +125,7 @@ public class server_chat extends javax.swing.JFrame {
     static Vector<ClientHandler> ar = new Vector<>(); 
       
     // counter for clients 
-    static int i = 0;
+    static int i = 1;
     
     // file to store the encrypted chat session
     //static File encryptChat = new File("C:\\Users\\Nabajyoti\\Downloads\\multichatuser-master (1)\\multichatuser-master\\Public Keys","EncryptionFile.txt");
